@@ -14,7 +14,6 @@ export const metadata: Metadata = {
   title: 'Spotify Clone',
   description: 'Listen to music!',
 };
-
 export const revalidate = 0;
 
 export default async function RootLayout({
@@ -23,7 +22,6 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
   const userSongs = await getSongsByUserID();
-
   return (
     <html lang='en'>
       <body className={font.className}>

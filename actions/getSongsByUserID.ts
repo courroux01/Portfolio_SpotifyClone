@@ -29,5 +29,3 @@ const getSongsByUserID = async (): Promise<Song[]> => {
 };
 
 export default getSongsByUserID;
-
-export default getSongs;
