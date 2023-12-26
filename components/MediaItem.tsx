@@ -42,8 +42,9 @@ const MediaItem: React.FC<MediaItemProps> = ({ onClick, song }) => {
         <Image
           fill
           src={imageUrl || '../public/images/like.png'}
+          sizes='(min-width:1px) 100%'
           alt='image'
-          className='object-cover'
+          className='object-cover grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-8'
         />
       </div>
       <div

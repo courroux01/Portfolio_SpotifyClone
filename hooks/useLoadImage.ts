@@ -1,8 +1,8 @@
 import { Song } from '@/types';
-import { useSupabaseClient } from '@supabase/auth-helpers-react';
+import { useSessionContext } from '@supabase/auth-helpers-react';
 
 const useLoadImage = (song: Song) => {
-  const supabaseClient = useSupabaseClient();
+  const { supabaseClient } = useSessionContext();
 
   if (!song) return null;
 

@@ -1,9 +1,10 @@
 import Header from '@/components/Header';
 import ListItem from '@/components/ListItem';
 import getSongs from '@/actions/getSongs';
-import PageContent from '@/components/PageContent';
+import PageContent from '@/app/(site)/components/PageContent';
+import LikedPicture from '../liked.png';
 
-export const revaliate = 0;
+export const revalidate = 0;
 
 export default async function Home() {
   const songs = await getSongs();
@@ -13,11 +14,7 @@ export default async function Home() {
         <div className='mb-2'>
           <h1 className='text-white text-3xl font-semibold'>Welcome back!</h1>
           <div className=' grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-3 mt-4'>
-            <ListItem
-              image='/images/like.png'
-              name='Liked songs'
-              href='liked'
-            />
+            <ListItem image={LikedPicture} name='Liked songs' href='liked' />
           </div>
         </div>
       </Header>
@@ -32,3 +29,5 @@ export default async function Home() {
     </div>
   );
 }
+
+/*    < */
