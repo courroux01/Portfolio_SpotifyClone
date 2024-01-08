@@ -3,7 +3,7 @@
 import Box from '@/components/Box';
 import React from 'react';
 
-const error = () => {
+const Error = () => {
   return (
     <Box className='h-full flex items-center justify-center'>
       <div className='text-neutral-400'>Something went wrong. </div>
@@ -11,4 +11,4 @@ const error = () => {
   );
 };
 
-export default error;
+export default Error;

@@ -1,6 +1,5 @@
 import { Song } from '@/types';
 import { createServerComponentClient } from '@supabase/auth-helpers-nextjs';
-import { useSessionContext } from '@supabase/auth-helpers-react';
 import { cookies } from 'next/headers';
 
 const getSongs = async (): Promise<Song[]> => {
