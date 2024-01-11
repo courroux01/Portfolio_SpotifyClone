@@ -3,7 +3,6 @@
 import useDebounce from '@/hooks/useDebounce';
 import { useRouter } from 'next/navigation';
 import React, { useEffect, useState } from 'react';
-import qs from 'query-string';
 import Input from './Input';
 
 const SearchInput = () => {
@@ -15,11 +14,15 @@ const SearchInput = () => {
     const query = {
       title: debouncedValue,
     };
-    const url = qs.stringifyUrl({
-      url: '/search',
-      query: query,
-    });
-    router.push(url);
+
+    import('query-string').then((qs) =>
+      router.push(
+        qs.default.stringifyUrl({
+          url: '/search',
+          query: query,
+        })
+      )
+    );
   }, [debouncedValue, router]);
   return (
     <Input
